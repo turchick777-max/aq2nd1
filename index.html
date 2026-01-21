@@ -280,19 +280,19 @@ body {
 .svgSubLabel { font: 400 10px ui-sans-serif, system-ui; fill: rgba(71,85,105,.65); }
 .svgCalloutBox { fill: var(--core-fill); stroke: rgba(0,158,186,.5); stroke-width: 1.5; }
 .svgCalloutText { font: 500 10px ui-sans-serif, system-ui; fill: rgba(0,158,186,1); }
-.moduleBox { stroke-width: 2; filter: drop-shadow(0 2px 4px rgba(15,23,42,0.05)); }
+.moduleBox { stroke-width: 1; filter: none; }
 .module .moduleTitle { font: 600 13px ui-sans-serif, system-ui; fill: rgba(15,23,42,.88); }
 .module .moduleSub { font: 400 10px ui-sans-serif, system-ui; fill: rgba(71,85,105,.75); }
-.module.core .moduleBox { fill: var(--core-fill); stroke: rgba(0,158,186,.65); }
-.module.cots .moduleBox { fill: var(--cots-fill); stroke: var(--cots-stroke); }
-.module.concentrate .moduleBox { fill: var(--conc-fill); stroke: rgba(210,132,55,.65); }
+.module.core .moduleBox { fill: var(--core-fill); stroke: rgba(0,158,186,.5); }
+.module.cots .moduleBox { fill: var(--cots-fill); stroke: rgba(15,23,42,0.18); }
+.module.concentrate .moduleBox { fill: var(--conc-fill); stroke: rgba(210,132,55,.5); }
 .module.concentrate .moduleTitle { fill: rgba(180,100,30,.9); }
 .module.concentrate .moduleSub { fill: rgba(180,100,30,.65); }
-.stream { fill: none; stroke: var(--stream); stroke-width: 2; }
-.stream.accent { stroke: var(--accent); stroke-width: 2.5; }
-.stream.concentrate { stroke: rgba(210,132,55,.6); stroke-dasharray: 5 3; }
-.coreBoundary { fill: none; stroke: rgba(0,158,186,.18); stroke-width: 1.5; stroke-dasharray: 6 4; }
-.module.is-active .moduleBox { stroke-width: 3; stroke: var(--accent); filter: drop-shadow(0 0 8px rgba(0,158,186,0.25)); }
+.stream { fill: none; stroke: var(--stream); stroke-width: 1; stroke-dasharray: 4 3; }
+.stream.accent { stroke: var(--stream); stroke-width: 1; stroke-dasharray: 4 3; }
+.stream.concentrate { stroke: rgba(210,132,55,.6); stroke-width: 1; stroke-dasharray: 4 3; }
+.coreBoundary { fill: none; stroke: rgba(0,158,186,.18); stroke-width: 1; stroke-dasharray: 6 4; }
+.module.is-active .moduleBox { stroke-width: 1.5; stroke: var(--accent); filter: drop-shadow(0 0 6px rgba(0,158,186,0.2)); }
 
 @media (max-width: 1100px) {
   .hiw__main { flex-direction: column; }
@@ -372,7 +372,7 @@ body {
 
             <!-- Inert gas above Gas-Sorbent -->
             <g class="svgCallout">
-              <rect x="195" y="22" width="110" height="36" rx="5" class="svgCalloutBox"/>
+              <rect x="195" y="22" width="110" height="36" rx="0" class="svgCalloutBox"/>
               <text x="250" y="38" text-anchor="middle" class="svgCalloutText">Inert carrier gas</text>
               <text x="250" y="50" text-anchor="middle" class="svgCalloutText">+ proprietary sorbent</text>
             </g>
@@ -385,7 +385,7 @@ body {
 
             <!-- INTAKE -->
             <g id="m-intake" class="module cots">
-              <rect x="20" y="125" width="130" height="55" rx="8" class="moduleBox"/>
+              <rect x="20" y="125" width="130" height="55" rx="0" class="moduleBox"/>
               <text x="85" y="150" text-anchor="middle" class="moduleTitle">Intake</text>
               <text x="85" y="165" text-anchor="middle" class="moduleSub">& Stabilization</text>
             </g>
@@ -395,7 +395,7 @@ body {
 
             <!-- GAS-SORBENT -->
             <g id="m-dosing" class="module core">
-              <rect x="185" y="125" width="130" height="55" rx="8" class="moduleBox"/>
+              <rect x="185" y="125" width="130" height="55" rx="0" class="moduleBox"/>
               <text x="250" y="150" text-anchor="middle" class="moduleTitle">Gas-Sorbent</text>
               <text x="250" y="165" text-anchor="middle" class="moduleSub">Dosing</text>
             </g>
@@ -405,7 +405,7 @@ body {
 
             <!-- SORPTION -->
             <g id="m-sorption" class="module core">
-              <rect x="350" y="125" width="130" height="55" rx="8" class="moduleBox"/>
+              <rect x="350" y="125" width="130" height="55" rx="0" class="moduleBox"/>
               <text x="415" y="150" text-anchor="middle" class="moduleTitle">Sorption</text>
               <text x="415" y="165" text-anchor="middle" class="moduleSub">(Contactor)</text>
             </g>
@@ -415,7 +415,7 @@ body {
 
             <!-- SEPARATION -->
             <g id="m-separation" class="module core">
-              <rect x="515" y="125" width="130" height="55" rx="8" class="moduleBox"/>
+              <rect x="515" y="125" width="130" height="55" rx="0" class="moduleBox"/>
               <text x="580" y="150" text-anchor="middle" class="moduleTitle">Separation</text>
               <text x="580" y="165" text-anchor="middle" class="moduleSub">(Phase split)</text>
             </g>
@@ -425,7 +425,7 @@ body {
 
             <!-- MINERALIZATION -->
             <g id="m-polishing" class="module cots">
-              <rect x="680" y="125" width="130" height="55" rx="8" class="moduleBox"/>
+              <rect x="680" y="125" width="130" height="55" rx="0" class="moduleBox"/>
               <text x="745" y="150" text-anchor="middle" class="moduleTitle">Mineralization</text>
               <text x="745" y="165" text-anchor="middle" class="moduleSub">& Polishing</text>
             </g>
@@ -454,13 +454,13 @@ body {
 
             <!-- CONCENTRATE -->
             <g id="m-concentrate" class="module concentrate">
-              <rect x="500" y="255" width="270" height="55" rx="8" class="moduleBox"/>
+              <rect x="500" y="255" width="270" height="55" rx="0" class="moduleBox"/>
               <text x="635" y="280" text-anchor="middle" class="moduleTitle">Concentrate / residual stream</text>
               <text x="635" y="295" text-anchor="middle" class="moduleSub">(typically &lt;5% of flow; controlled output)</text>
             </g>
 
             <!-- Core boundary -->
-            <rect x="178" y="118" width="475" height="70" rx="10" class="coreBoundary"/>
+            <rect x="178" y="118" width="475" height="70" rx="0" class="coreBoundary"/>
           </svg>
         </div>
       </div>
