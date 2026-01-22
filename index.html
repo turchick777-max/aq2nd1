@@ -59,14 +59,15 @@ body {
 .hiw__frame {
   position: absolute;
   inset: 0;
+  border: 1px solid var(--frame2);
   pointer-events: none;
 }
 
-.hiw__corner { position: absolute; width: 20px; height: 20px; }
-.hiw__corner.tl { top: 0; left: 0; border-left: 2px solid var(--frame); border-top: 2px solid var(--frame); }
-.hiw__corner.tr { top: 0; right: 0; border-right: 2px solid var(--frame); border-top: 2px solid var(--frame); }
-.hiw__corner.bl { bottom: 0; left: 0; border-left: 2px solid var(--frame); border-bottom: 2px solid var(--frame); }
-.hiw__corner.br { bottom: 0; right: 0; border-right: 2px solid var(--frame); border-bottom: 2px solid var(--frame); }
+.hiw__corner { position: absolute; width: 10px; height: 10px; }
+.hiw__corner.tl { top: -1px; left: -1px; border-left: 3px solid var(--frame); border-top: 3px solid var(--frame); }
+.hiw__corner.tr { top: -1px; right: -1px; border-right: 3px solid var(--frame); border-top: 3px solid var(--frame); }
+.hiw__corner.bl { bottom: -1px; left: -1px; border-left: 3px solid var(--frame); border-bottom: 3px solid var(--frame); }
+.hiw__corner.br { bottom: -1px; right: -1px; border-right: 3px solid var(--frame); border-bottom: 3px solid var(--frame); }
 
 .hiw__header {
   padding: 10px 20px 20px;
