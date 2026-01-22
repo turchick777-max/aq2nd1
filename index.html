@@ -343,7 +343,7 @@ body {
       <!-- Diagram area -->
       <div class="hiw__diagram-area">
         <div class="hiw__diagram-wrapper">
-          <svg class="hiw__svg" viewBox="0 0 950 360" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+          <svg class="hiw__svg" viewBox="0 0 950 650" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
             <defs>
               <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
                 <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--stream)" />
@@ -357,85 +357,92 @@ body {
             </defs>
 
             <!-- Feed Water above Intake -->
-            <text x="85" y="70" text-anchor="middle" class="svgLabel">Feed water</text>
-            <text x="85" y="84" text-anchor="middle" class="svgSubLabel">(seawater / brackish /</text>
-            <text x="85" y="96" text-anchor="middle" class="svgSubLabel">high-salinity / variable)</text>
-
-            <!-- Inert gas above Gas-Sorbent -->
-            <g class="svgCallout">
-              <rect x="195" y="22" width="110" height="36" rx="0" class="svgCalloutBox"/>
-              <text x="250" y="38" text-anchor="middle" class="svgCalloutText">Inert carrier gas</text>
-              <text x="250" y="50" text-anchor="middle" class="svgCalloutText">+ proprietary sorbent</text>
-            </g>
+            <text x="100" y="35" text-anchor="middle" class="svgLabel">Feed water</text>
+            <text x="100" y="49" text-anchor="middle" class="svgSubLabel">(seawater / brackish /</text>
+            <text x="100" y="61" text-anchor="middle" class="svgSubLabel">high-salinity / variable)</text>
 
             <!-- Arrow Feed to Intake -->
-            <path d="M 85 105 L 85 125" class="stream" marker-end="url(#arrow)"/>
-
-            <!-- Arrow Inert to Dosing -->
-            <path d="M 250 58 L 250 125" class="stream" marker-end="url(#arrow)"/>
+            <path d="M 100 70 L 100 90" class="stream" marker-end="url(#arrow)"/>
 
             <!-- INTAKE -->
             <g id="m-intake" class="module cots">
-              <rect x="20" y="125" width="130" height="55" rx="0" class="moduleBox"/>
-              <text x="85" y="150" text-anchor="middle" class="moduleTitle">Intake</text>
-              <text x="85" y="167" text-anchor="middle" class="moduleTitle">& Stabilization</text>
+              <rect x="35" y="95" width="130" height="55" rx="0" class="moduleBox"/>
+              <text x="100" y="120" text-anchor="middle" class="moduleTitle">Intake</text>
+              <text x="100" y="137" text-anchor="middle" class="moduleTitle">& Stabilization</text>
             </g>
 
-            <!-- Arrow Intake to Dosing -->
-            <path d="M 150 152 L 185 152" class="stream" marker-end="url(#arrow)"/>
+            <!-- Arrow Intake to Gas-Sorbent -->
+            <path d="M 165 122 L 200 122 L 200 175 L 220 175" class="stream" marker-end="url(#arrow)"/>
+
+            <!-- Inert gas above Gas-Sorbent -->
+            <g class="svgCallout">
+              <rect x="230" y="95" width="110" height="36" rx="0" class="svgCalloutBox"/>
+              <text x="285" y="111" text-anchor="middle" class="svgCalloutText">Inert carrier gas</text>
+              <text x="285" y="123" text-anchor="middle" class="svgCalloutText">+ proprietary sorbent</text>
+            </g>
+
+            <!-- Arrow Inert to Dosing -->
+            <path d="M 285 131 L 285 155" class="stream" marker-end="url(#arrow)"/>
 
             <!-- GAS-SORBENT -->
             <g id="m-dosing" class="module core">
-              <rect x="185" y="125" width="130" height="55" rx="0" class="moduleBox"/>
-              <text x="250" y="150" text-anchor="middle" class="moduleTitle">Gas-Sorbent</text>
-              <text x="250" y="165" text-anchor="middle" class="moduleSub">(Dosing)</text>
+              <rect x="220" y="160" width="130" height="55" rx="0" class="moduleBox"/>
+              <text x="285" y="185" text-anchor="middle" class="moduleTitle">Gas-Sorbent</text>
+              <text x="285" y="200" text-anchor="middle" class="moduleSub">(Dosing)</text>
             </g>
 
-            <!-- Arrow Dosing to Sorption -->
-            <path d="M 315 152 L 350 152" class="stream accent" marker-end="url(#arrowAccent)"/>
+            <!-- Arrow Gas-Sorbent to Sorption -->
+            <path d="M 350 187 L 385 187 L 385 240 L 405 240" class="stream" marker-end="url(#arrow)"/>
 
             <!-- SORPTION -->
             <g id="m-sorption" class="module core">
-              <rect x="350" y="125" width="130" height="55" rx="0" class="moduleBox"/>
-              <text x="415" y="150" text-anchor="middle" class="moduleTitle">Sorption</text>
-              <text x="415" y="165" text-anchor="middle" class="moduleSub">(Contactor)</text>
+              <rect x="405" y="225" width="130" height="55" rx="0" class="moduleBox"/>
+              <text x="470" y="250" text-anchor="middle" class="moduleTitle">Sorption</text>
+              <text x="470" y="265" text-anchor="middle" class="moduleSub">(Contactor)</text>
             </g>
 
             <!-- Arrow Sorption to Separation -->
-            <path d="M 480 152 L 515 152" class="stream accent" marker-end="url(#arrowAccent)"/>
+            <path d="M 535 252 L 570 252 L 570 305 L 590 305" class="stream" marker-end="url(#arrow)"/>
 
             <!-- SEPARATION -->
             <g id="m-separation" class="module core">
-              <rect x="515" y="125" width="130" height="55" rx="0" class="moduleBox"/>
-              <text x="580" y="150" text-anchor="middle" class="moduleTitle">Separation</text>
-              <text x="580" y="165" text-anchor="middle" class="moduleSub">(Phase split)</text>
+              <rect x="590" y="290" width="130" height="55" rx="0" class="moduleBox"/>
+              <text x="655" y="315" text-anchor="middle" class="moduleTitle">Separation</text>
+              <text x="655" y="330" text-anchor="middle" class="moduleSub">(Phase split)</text>
             </g>
 
             <!-- Arrow Separation to Mineralization -->
-            <path d="M 645 152 L 680 152" class="stream" marker-end="url(#arrow)"/>
+            <path d="M 720 317 L 755 317 L 755 370 L 775 370" class="stream" marker-end="url(#arrow)"/>
 
             <!-- MINERALIZATION -->
             <g id="m-polishing" class="module cots">
-              <rect x="680" y="125" width="130" height="55" rx="0" class="moduleBox"/>
-              <text x="745" y="150" text-anchor="middle" class="moduleTitle">Mineralization</text>
-              <text x="745" y="167" text-anchor="middle" class="moduleTitle">& Polishing</text>
+              <rect x="775" y="355" width="130" height="55" rx="0" class="moduleBox"/>
+              <text x="840" y="380" text-anchor="middle" class="moduleTitle">Mineralization</text>
+              <text x="840" y="397" text-anchor="middle" class="moduleTitle">& Polishing</text>
             </g>
 
             <!-- Arrow Mineralization to Drinking Water -->
-            <path d="M 810 152 L 845 152 L 845 282 L 860 282" class="stream" marker-end="url(#arrow)"/>
+            <path d="M 840 410 L 840 445 L 870 445 L 870 470" class="stream" marker-end="url(#arrow)"/>
 
             <!-- DRINKING WATER -->
             <g id="m-drinking" class="module cots">
-              <rect x="860" y="255" width="80" height="55" rx="0" class="moduleBox"/>
-              <text x="900" y="277" text-anchor="middle" class="moduleTitle">Drinking</text>
-              <text x="900" y="294" text-anchor="middle" class="moduleSub">Water</text>
+              <rect x="805" y="475" width="100" height="55" rx="0" class="moduleBox"/>
+              <text x="855" y="500" text-anchor="middle" class="moduleTitle">Drinking</text>
+              <text x="855" y="517" text-anchor="middle" class="moduleSub">Water</text>
             </g>
 
             <!-- Arrow Separation to Concentrate -->
-            <path d="M 580 180 L 580 225 L 635 225 L 635 250" class="stream concentrate" marker-end="url(#arrowConc)"/>
+            <path d="M 655 345 L 655 390 L 500 390 L 500 425" class="stream concentrate" marker-end="url(#arrowConc)"/>
 
-            <!-- LEGEND - left of Concentrate -->
-            <foreignObject x="20" y="215" width="340" height="140">
+            <!-- CONCENTRATE -->
+            <g id="m-concentrate" class="module concentrate">
+              <rect x="250" y="430" width="320" height="55" rx="0" class="moduleBox"/>
+              <text x="410" y="455" text-anchor="middle" class="moduleTitle">Concentrate / residual stream</text>
+              <text x="410" y="470" text-anchor="middle" class="moduleSub">(typically &lt;5% of flow; controlled output)</text>
+            </g>
+
+            <!-- LEGEND -->
+            <foreignObject x="20" y="510" width="400" height="130">
               <div xmlns="http://www.w3.org/1999/xhtml" class="svg-legend">
                 <div class="svg-legend__title">LEGEND</div>
                 <div class="svg-legend__item">
@@ -453,15 +460,8 @@ body {
               </div>
             </foreignObject>
 
-            <!-- CONCENTRATE -->
-            <g id="m-concentrate" class="module concentrate">
-              <rect x="500" y="255" width="270" height="55" rx="0" class="moduleBox"/>
-              <text x="635" y="280" text-anchor="middle" class="moduleTitle">Concentrate / residual stream</text>
-              <text x="635" y="295" text-anchor="middle" class="moduleSub">(typically &lt;5% of flow; controlled output)</text>
-            </g>
-
-            <!-- Core boundary -->
-            <path d="M 178 15 L 323 15 L 323 115 L 653 115 L 653 188 L 178 188 Z" class="coreBoundary"/>
+            <!-- Core boundary - diagonal stepped shape -->
+            <path d="M 215 90 L 355 90 L 355 155 L 540 155 L 540 220 L 725 220 L 725 285 L 725 350 L 215 350 Z" class="coreBoundary"/>
           </svg>
         </div>
       </div>
