@@ -59,24 +59,15 @@ body {
 .hiw__frame {
   position: absolute;
   inset: 0;
-  border: 2px solid var(--frame);
-  border-radius: 20px;
+  border: none;
   pointer-events: none;
 }
 
-.hiw__frame::after {
-  content: "";
-  position: absolute;
-  inset: 10px;
-  border: 1px solid var(--frame2);
-  border-radius: 16px;
-}
-
-.hiw__corner { position: absolute; width: 18px; height: 18px; }
-.hiw__corner.tl { top: -2px; left: -2px; border-left: 3px solid var(--frame); border-top: 3px solid var(--frame); }
-.hiw__corner.tr { top: -2px; right: -2px; border-right: 3px solid var(--frame); border-top: 3px solid var(--frame); }
-.hiw__corner.bl { bottom: -2px; left: -2px; border-left: 3px solid var(--frame); border-bottom: 3px solid var(--frame); }
-.hiw__corner.br { bottom: -2px; right: -2px; border-right: 3px solid var(--frame); border-bottom: 3px solid var(--frame); }
+.hiw__corner { position: absolute; width: 12px; height: 12px; }
+.hiw__corner.tl { top: -6px; left: -6px; border-left: 2px solid var(--frame); border-top: 2px solid var(--frame); }
+.hiw__corner.tr { top: -6px; right: -6px; border-right: 2px solid var(--frame); border-top: 2px solid var(--frame); }
+.hiw__corner.bl { bottom: -6px; left: -6px; border-left: 2px solid var(--frame); border-bottom: 2px solid var(--frame); }
+.hiw__corner.br { bottom: -6px; right: -6px; border-right: 2px solid var(--frame); border-bottom: 2px solid var(--frame); }
 
 .hiw__header {
   padding: 10px 20px 20px;
