@@ -59,15 +59,31 @@ body {
 .hiw__frame {
   position: absolute;
   inset: 0;
-  border: none;
   pointer-events: none;
 }
 
-.hiw__corner { position: absolute; width: 12px; height: 12px; }
-.hiw__corner.tl { top: -6px; left: -6px; border-left: 2px solid var(--frame); border-top: 2px solid var(--frame); }
-.hiw__corner.tr { top: -6px; right: -6px; border-right: 2px solid var(--frame); border-top: 2px solid var(--frame); }
-.hiw__corner.bl { bottom: -6px; left: -6px; border-left: 2px solid var(--frame); border-bottom: 2px solid var(--frame); }
-.hiw__corner.br { bottom: -6px; right: -6px; border-right: 2px solid var(--frame); border-bottom: 2px solid var(--frame); }
+.hiw__frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid var(--frame);
+  clip-path: polygon(
+    /* Top-left corner */
+    0 16px, 6px 16px, 6px 6px, 16px 6px, 16px 0,
+    /* Top edge to top-right corner */
+    calc(100% - 16px) 0, calc(100% - 16px) 6px, calc(100% - 6px) 6px, calc(100% - 6px) 16px, 100% 16px,
+    /* Right edge to bottom-right corner */
+    100% calc(100% - 16px), calc(100% - 6px) calc(100% - 16px), calc(100% - 6px) calc(100% - 6px), calc(100% - 16px) calc(100% - 6px), calc(100% - 16px) 100%,
+    /* Bottom edge to bottom-left corner */
+    16px 100%, 16px calc(100% - 6px), 6px calc(100% - 6px), 6px calc(100% - 16px), 0 calc(100% - 16px)
+  );
+}
+
+.hiw__corner { position: absolute; width: 14px; height: 14px; }
+.hiw__corner.tl { top: -2px; left: -2px; border-left: 2px solid var(--frame); border-top: 2px solid var(--frame); }
+.hiw__corner.tr { top: -2px; right: -2px; border-right: 2px solid var(--frame); border-top: 2px solid var(--frame); }
+.hiw__corner.bl { bottom: -2px; left: -2px; border-left: 2px solid var(--frame); border-bottom: 2px solid var(--frame); }
+.hiw__corner.br { bottom: -2px; right: -2px; border-right: 2px solid var(--frame); border-bottom: 2px solid var(--frame); }
 
 .hiw__header {
   padding: 10px 20px 20px;
