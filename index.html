@@ -205,27 +205,34 @@ body {
 /* Legend (HTML version) */
 .hiw__legend {
   display: flex;
-  gap: 24px;
-  padding: 10px 0;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px 0;
 }
 
 .hiw__legend-title {
-  font: 700 9px ui-monospace, monospace;
-  letter-spacing: 0.12em;
-  color: rgba(15,23,42,0.65);
+  font: 700 10px ui-sans-serif, system-ui;
+  letter-spacing: 0.08em;
+  color: rgba(15,23,42,0.7);
   text-transform: uppercase;
-  margin-right: 8px;
+  margin-bottom: 4px;
+}
+
+.hiw__legend-items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .hiw__legend-item {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
 .hiw__legend-swatch {
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   border-radius: 3px;
   border: 1.5px solid;
   flex-shrink: 0;
@@ -242,8 +249,19 @@ body {
 }
 
 .hiw__legend-label {
-  font: 500 11px/1.35 ui-sans-serif, system-ui;
-  color: rgba(15,23,42,0.8);
+  font: 400 11px/1.35 ui-sans-serif, system-ui;
+  color: rgba(15,23,42,0.75);
+}
+
+.hiw__legend-note {
+  font: 400 10px/1.5 ui-sans-serif, system-ui;
+  color: rgba(210,132,55,0.9);
+  margin-top: 4px;
+}
+
+.hiw__legend-note-secondary {
+  font: 500 10px/1.5 ui-sans-serif, system-ui;
+  color: rgba(15,23,42,0.65);
 }
 
 /* SVG Styles */
@@ -273,7 +291,7 @@ body {
 
 @media (max-width: 768px) {
   .hiw__title { font-size: 20px; letter-spacing: 0.2em; }
-  .hiw__legend { flex-direction: column; gap: 10px; align-items: center; }
+  .hiw__legend { align-items: flex-start; }
 }
 </style>
 </head>
@@ -438,14 +456,18 @@ body {
         <!-- Legend -->
         <div class="hiw__legend">
           <span class="hiw__legend-title">LEGEND</span>
-          <div class="hiw__legend-item">
-            <span class="hiw__legend-swatch core"></span>
-            <span class="hiw__legend-label">AQUINTAQA core module boundary (encapsulated/protected)</span>
+          <div class="hiw__legend-items">
+            <div class="hiw__legend-item">
+              <span class="hiw__legend-swatch core"></span>
+              <span class="hiw__legend-label">AQUINTAQA core module boundary (encapsulated/protected)</span>
+            </div>
+            <div class="hiw__legend-item">
+              <span class="hiw__legend-swatch cots"></span>
+              <span class="hiw__legend-label">COTS-based auxiliary systems (intake, utilities, polishing, controls)</span>
+            </div>
           </div>
-          <div class="hiw__legend-item">
-            <span class="hiw__legend-swatch cots"></span>
-            <span class="hiw__legend-label">COTS-based auxiliary systems (intake, utilities, polishing, controls)</span>
-          </div>
+          <p class="hiw__legend-note">Note: sensitive setpoints, materials, and core control logic are disclosed stepwise under NDA.</p>
+          <p class="hiw__legend-note-secondary">Colour coding applies to modules only, not to streams.</p>
         </div>
       </div>
     </div>
