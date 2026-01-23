@@ -364,13 +364,13 @@ body {
 
             <!-- Inert gas label (top right) -->
             <g class="svgCallout">
-              <rect x="500" y="35" width="110" height="36" rx="0" class="svgCalloutBox"/>
-              <text x="555" y="51" text-anchor="middle" class="svgCalloutText">Inert carrier gas</text>
-              <text x="555" y="63" text-anchor="middle" class="svgCalloutText">+ proprietary sorbent</text>
+              <rect x="510" y="35" width="110" height="36" rx="0" class="svgCalloutBox"/>
+              <text x="565" y="51" text-anchor="middle" class="svgCalloutText">Inert carrier gas</text>
+              <text x="565" y="63" text-anchor="middle" class="svgCalloutText">+ proprietary sorbent</text>
             </g>
 
             <!-- Vertical line from Inert carrier down to Gas-Sorbent -->
-            <path d="M 555 71 L 555 105" class="stream"/>
+            <path d="M 565 71 L 565 170" class="stream"/>
 
             <!-- INTAKE (below feed water, left side) -->
             <g id="m-intake" class="module cots">
@@ -380,30 +380,30 @@ body {
             </g>
 
             <!-- Horizontal line from Intake going right to Gas-Sorbent -->
-            <path d="M 385 132 L 490 132" class="stream" marker-end="url(#arrow)"/>
+            <path d="M 385 132 L 430 132 L 430 197 L 500 197" class="stream" marker-end="url(#arrow)"/>
 
             <!-- GAS-SORBENT (center, below Inert carrier) -->
             <g id="m-dosing" class="module core">
-              <rect x="490" y="105" width="130" height="55" rx="0" class="moduleBox"/>
-              <text x="555" y="130" text-anchor="middle" class="moduleTitle">Gas-Sorbent</text>
-              <text x="555" y="147" text-anchor="middle" class="moduleSub">(Dosing)</text>
+              <rect x="500" y="170" width="130" height="55" rx="0" class="moduleBox"/>
+              <text x="565" y="195" text-anchor="middle" class="moduleTitle">Gas-Sorbent</text>
+              <text x="565" y="212" text-anchor="middle" class="moduleSub">(Dosing)</text>
             </g>
 
             <!-- Line from Gas-Sorbent to Sorption -->
-            <path d="M 620 132 L 680 132" class="stream" marker-end="url(#arrow)"/>
+            <path d="M 630 197 L 650 197 L 650 275 L 690 275" class="stream" marker-end="url(#arrow)"/>
 
             <!-- SORPTION (right side) -->
             <g id="m-sorption" class="module core">
-              <rect x="680" y="90" width="100" height="55" rx="0" class="moduleBox"/>
-              <text x="730" y="115" text-anchor="middle" class="moduleTitle">Sorption</text>
-              <text x="730" y="132" text-anchor="middle" class="moduleSub">(Contactor)</text>
+              <rect x="690" y="230" width="90" height="90" rx="0" class="moduleBox"/>
+              <text x="735" y="270" text-anchor="middle" class="moduleTitle">Sorption</text>
+              <text x="735" y="287" text-anchor="middle" class="moduleSub">(Contactor)</text>
             </g>
 
             <!-- Vertical line going down from Sorption on the right, loop to MINERALIZATION -->
-            <path d="M 780 117 L 820 117 L 820 305 L 680 305" class="stream"/>
+            <path d="M 780 275 L 820 275 L 820 265 L 465 265" class="stream" marker-end="url(#arrow)"/>
 
             <!-- Vertical line going down from left area to Concentrate -->
-            <path d="M 180 160 L 180 195" class="stream concentrate" marker-end="url(#arrowConc)"/>
+            <path d="M 255 132 L 180 132 L 180 200" class="stream concentrate" marker-end="url(#arrowConc)"/>
 
             <!-- CONCENTRATE (lower left) -->
             <g id="m-concentrate" class="module concentrate">
@@ -423,30 +423,30 @@ body {
             </g>
 
             <!-- Line from Separation down to Mineralization (left side) -->
-            <path d="M 400 290 L 400 305 L 500 305" class="stream" marker-end="url(#arrow)"/>
+            <path d="M 400 290 L 400 330 L 500 330" class="stream" marker-end="url(#arrow)"/>
 
             <!-- MINERALIZATION (center bottom, wider) -->
             <g id="m-polishing" class="module cots">
-              <rect x="500" y="280" width="180" height="55" rx="0" class="moduleBox"/>
-              <text x="590" y="305" text-anchor="middle" class="moduleTitle">Mineralization</text>
-              <text x="590" y="322" text-anchor="middle" class="moduleTitle">& Polishing</text>
+              <rect x="500" y="305" width="180" height="55" rx="0" class="moduleBox"/>
+              <text x="590" y="330" text-anchor="middle" class="moduleTitle">Mineralization</text>
+              <text x="590" y="347" text-anchor="middle" class="moduleTitle">& Polishing</text>
             </g>
 
             <!-- Line from Mineralization down to DRINKING -->
-            <path d="M 590 335 L 590 360 L 700 360" class="stream" marker-end="url(#arrow)"/>
+            <path d="M 680 332 L 720 332 L 720 387 L 700 387" class="stream" marker-end="url(#arrow)"/>
 
             <!-- DRINKING WATER (bottom right) -->
             <g id="m-drinking" class="module cots">
-              <rect x="700" y="335" width="100" height="55" rx="0" class="moduleBox"/>
-              <text x="750" y="360" text-anchor="middle" class="moduleTitle">Drinking</text>
-              <text x="750" y="377" text-anchor="middle" class="moduleSub">Water</text>
+              <rect x="700" y="360" width="100" height="55" rx="0" class="moduleBox"/>
+              <text x="750" y="385" text-anchor="middle" class="moduleTitle">Drinking</text>
+              <text x="750" y="402" text-anchor="middle" class="moduleSub">Water</text>
             </g>
 
             <!-- Horizontal line going right from DRINKING -->
-            <path d="M 800 362 L 880 362" class="stream"/>
+            <path d="M 800 387 L 880 387" class="stream"/>
 
             <!-- Core boundary -->
-            <path d="M 485 35 L 615 35 L 615 85 L 785 85 L 785 150 L 625 150 L 625 175 L 330 175 L 330 295 L 485 295 Z" class="coreBoundary"/>
+            <path d="M 485 35 L 615 35 L 615 85 L 800 85 L 800 330 L 625 330 L 625 355 L 330 355 L 330 295 L 485 295 Z" class="coreBoundary"/>
 
             <!-- LEGEND (inside SVG, under Concentrate) -->
             <g class="legend-group" transform="translate(20, 350)">
