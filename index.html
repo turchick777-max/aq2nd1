@@ -355,15 +355,15 @@ body {
             </defs>
 
             <!-- Horizontal line at top (from feed water up and right) -->
-            <path d="M 180 30 L 180 10 L 750 10" class="stream"/>
+            <path d="M 100 30 L 100 10 L 750 10" class="stream"/>
 
             <!-- Feed Water label (top left) -->
-            <text x="180" y="48" text-anchor="middle" class="svgLabel">Feed water</text>
-            <text x="180" y="62" text-anchor="middle" class="svgSubLabel">(seawater / brackish /</text>
-            <text x="180" y="74" text-anchor="middle" class="svgSubLabel">high-salinity / variable)</text>
+            <text x="100" y="48" text-anchor="middle" class="svgLabel">Feed water</text>
+            <text x="100" y="62" text-anchor="middle" class="svgSubLabel">(seawater / brackish /</text>
+            <text x="100" y="74" text-anchor="middle" class="svgSubLabel">high-salinity / variable)</text>
 
-            <!-- Vertical line from feed water down to INTAKE -->
-            <path d="M 180 83 L 180 105" class="stream"/>
+            <!-- Line from feed water down then right to INTAKE -->
+            <path d="M 100 83 L 100 132 L 255 132" class="stream" marker-end="url(#arrow)"/>
 
             <!-- Inert gas label (top right) -->
             <g class="svgCallout">
