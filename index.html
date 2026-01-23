@@ -341,7 +341,7 @@ body {
       <!-- Diagram area -->
       <div class="hiw__diagram-area">
         <div class="hiw__diagram-wrapper">
-          <svg class="hiw__svg" viewBox="0 0 900 370" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+          <svg class="hiw__svg" viewBox="0 0 900 430" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
             <defs>
               <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
                 <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--stream)" />
@@ -400,7 +400,7 @@ body {
             </g>
 
             <!-- Vertical line going down from Sorption on the right, loop to MINERALIZATION -->
-            <path d="M 780 117 L 820 117 L 820 250 L 680 250" class="stream"/>
+            <path d="M 780 117 L 820 117 L 820 305 L 680 305" class="stream"/>
 
             <!-- Vertical line going down from left area to Concentrate -->
             <path d="M 180 160 L 180 195" class="stream concentrate" marker-end="url(#arrowConc)"/>
@@ -413,43 +413,43 @@ body {
             </g>
 
             <!-- Vertical line down center to Separation -->
-            <path d="M 400 160 L 400 175" class="stream" marker-end="url(#arrow)"/>
+            <path d="M 400 160 L 400 230" class="stream" marker-end="url(#arrow)"/>
 
             <!-- SEPARATION (center) -->
             <g id="m-separation" class="module core">
-              <rect x="335" y="180" width="130" height="55" rx="0" class="moduleBox"/>
-              <text x="400" y="205" text-anchor="middle" class="moduleTitle">Separation</text>
-              <text x="400" y="222" text-anchor="middle" class="moduleSub">(Phase split)</text>
+              <rect x="335" y="235" width="130" height="55" rx="0" class="moduleBox"/>
+              <text x="400" y="260" text-anchor="middle" class="moduleTitle">Separation</text>
+              <text x="400" y="277" text-anchor="middle" class="moduleSub">(Phase split)</text>
             </g>
 
             <!-- Line from Separation down to Mineralization (left side) -->
-            <path d="M 400 235 L 400 250 L 500 250" class="stream" marker-end="url(#arrow)"/>
+            <path d="M 400 290 L 400 305 L 500 305" class="stream" marker-end="url(#arrow)"/>
 
             <!-- MINERALIZATION (center bottom, wider) -->
             <g id="m-polishing" class="module cots">
-              <rect x="500" y="225" width="180" height="55" rx="0" class="moduleBox"/>
-              <text x="590" y="250" text-anchor="middle" class="moduleTitle">Mineralization</text>
-              <text x="590" y="267" text-anchor="middle" class="moduleTitle">& Polishing</text>
+              <rect x="500" y="280" width="180" height="55" rx="0" class="moduleBox"/>
+              <text x="590" y="305" text-anchor="middle" class="moduleTitle">Mineralization</text>
+              <text x="590" y="322" text-anchor="middle" class="moduleTitle">& Polishing</text>
             </g>
 
             <!-- Line from Mineralization down to DRINKING -->
-            <path d="M 590 280 L 590 332 L 700 332" class="stream" marker-end="url(#arrow)"/>
+            <path d="M 590 335 L 590 360 L 700 360" class="stream" marker-end="url(#arrow)"/>
 
             <!-- DRINKING WATER (bottom right) -->
             <g id="m-drinking" class="module cots">
-              <rect x="700" y="305" width="100" height="55" rx="0" class="moduleBox"/>
-              <text x="750" y="330" text-anchor="middle" class="moduleTitle">Drinking</text>
-              <text x="750" y="347" text-anchor="middle" class="moduleSub">Water</text>
+              <rect x="700" y="335" width="100" height="55" rx="0" class="moduleBox"/>
+              <text x="750" y="360" text-anchor="middle" class="moduleTitle">Drinking</text>
+              <text x="750" y="377" text-anchor="middle" class="moduleSub">Water</text>
             </g>
 
             <!-- Horizontal line going right from DRINKING -->
-            <path d="M 800 332 L 880 332" class="stream"/>
+            <path d="M 800 362 L 880 362" class="stream"/>
 
             <!-- Core boundary -->
-            <path d="M 485 35 L 615 35 L 615 85 L 785 85 L 785 150 L 625 150 L 625 175 L 330 175 L 330 240 L 485 240 Z" class="coreBoundary"/>
+            <path d="M 485 35 L 615 35 L 615 85 L 785 85 L 785 150 L 625 150 L 625 175 L 330 175 L 330 295 L 485 295 Z" class="coreBoundary"/>
 
             <!-- LEGEND (inside SVG, under Concentrate) -->
-            <g class="legend-group" transform="translate(20, 295)">
+            <g class="legend-group" transform="translate(20, 350)">
               <text x="0" y="0" class="svgLabel" style="font-weight:700;font-size:10px;letter-spacing:0.08em;">LEGEND</text>
               <rect x="0" y="10" width="14" height="14" rx="2" fill="#D4F1F6" stroke="rgba(0,158,186,0.7)" stroke-width="1.5"/>
               <text x="20" y="21" style="font:400 10px ui-sans-serif,system-ui;fill:rgba(15,23,42,0.75);">AQUINTAQA core module boundary (encapsulated/protected)</text>
